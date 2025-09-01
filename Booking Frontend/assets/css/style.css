@@ -1,0 +1,58 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section with Hospital Background */
+.hero-section {
+  background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  min-height: 80vh;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Moving Text Animation */
+.moving-text {
+  display: inline-block;
+  font-size: 1.25rem;
+  animation: moveText 10s linear infinite;
+  color: #f8f9fa;
+}
+
+@keyframes moveText {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Feature Cards */
+.feature-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #f8f9fa;
+}
+
+
+
